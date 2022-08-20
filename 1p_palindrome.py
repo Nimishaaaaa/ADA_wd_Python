@@ -2,9 +2,9 @@ class un_palindrome:
     def __init__(self,str):
         self.str1=str
         self.unique_set=set()
-    def sub_st(self):
+    def substr(self):
         i = 0
-        while i <len(self.str1):
+        while i<len(self.str1):
             j = len(self.str1) - 1
             while (j>i):
                 if self.str1[i] == self.str1[j]:
@@ -14,15 +14,15 @@ class un_palindrome:
                         break
                 j -= 1
             i+=1
-    def is_palindrome(self,s_index,e_index):
-        while(s_index<=e_index):
-            if(self.str1[s_index]==self.str1[e_index]):
-                s_index+=1
-                e_index-=1
+    def is_palindrome(self,strt,end):
+        while(strt<=end):
+            if(self.str1[strt]==self.str1[end]):
+                strt+=1
+                end-=1
             else:
                 return False
         return True
-string="ASISAPEPART"
+string="ASIAISPTRT"
 pldrome1=un_palindrome(string)
-pldrome1.sub_st()
+pldrome1.substr()
 print(pldrome1.unique_set)
