@@ -23,6 +23,7 @@ class un_palindrome:
                 return False
         return True
 string="ASIAISPTRT"
+
 pldrome1=un_palindrome(string)
 pldrome1.substr()
 print(pldrome1.unique_set)
