@@ -4,13 +4,13 @@ def permutation(string):
 
 
     perms=permutation(string[1:]) 
-    result=[]
+    results=[]
     char=string[0]
 
     for perm  in perms:
         for i in range(len(perm)+1):
-            result.append(perm[:i]+ char + perm[i:])
+            results.append(perm[:i]+ char + perm[i:])
 
-    return result    
+    return results   
 
 print(permutation('ABC'))       
