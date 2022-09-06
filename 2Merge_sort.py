@@ -2,15 +2,13 @@ def merge_sort(arr):
     
      if len(arr)>1:
         mid=len(arr)//2      #diving ito 2 parts
-
         L=arr[:mid]             #recursion
         R=arr[mid:] 
 
         merge_sort(L)
         merge_sort(R) 
-
-
         i=j=k=0 
+
         while i<len(L) and j<len(R):                  #copy data to array L[] and R[]
             if L[i]<R[j]:
                 arr[k]=L[i]
@@ -19,23 +17,18 @@ def merge_sort(arr):
                 arr[k]=R[j]
                 j +=1
             k=k+1
-
         while i < len(L):                          #checking if any element is left
             arr[k] = L[i]
             i += 1
             k += 1
-  
         while j < len(R):
             arr[k] = R[j]
             j += 1
             k += 1
-
-        
 def printList(arr):
     for i in range(len(arr)):
         print(arr[i], end=" ")
     print()
-
 
 arr = [12, 11, 13, 5, 6, 7]
 merge_sort(arr)
