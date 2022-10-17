@@ -11,6 +11,7 @@ def partition(array, low, high):     #fun to find partition position
 
     return i + 1
 
+
 def quickSort(array, low, high):                  # function to perform quicksort
   if low < high:
     pi = partition(array, low, high)
