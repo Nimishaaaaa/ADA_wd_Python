@@ -27,6 +27,7 @@ m=adj_matrix(vertices)
 for i in range(vertices):
     row = input(f"Enter row {i}: ").split(" ")                       #converting list of strings into list of numbers
     
+    
     row = [int(item) for item in row] 
     for i in range(len(row)):
         if row[i]!= 0:
