@@ -14,12 +14,13 @@ deadline = deadline.split()
 deadline = [int(z) for z in deadline]
 
 
-sorted_array = [(Job[i], Profit[i], deadline[i]) for i in range(0,len(Profit))]
+arr = [(Job[i], Profit[i], deadline[i]) for i in range(0,len(Profit))]
 
-max_deadline = sorted(sorted_array, key=lambda i: i[2],reverse=True)
+max_deadline = sorted(arr, key=lambda i: i[2],reverse=True)
 n = max_deadline[0][2]
+print(arr)
 
-arr = sorted(sorted_array, key=lambda i: i[2], reverse=True)
+# arr = sorted(sorted_array, key=lambda i: i[2], reverse=True)
 
 def job_seq(max_deadline,arr):
     d = []
